@@ -1,13 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Search from './pages/Search';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div>
-      App Placeholder
-      <h1> da app </h1>
-      <ul>
-        <li>hello</li>
-      </ul>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/search" element={<Search />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
